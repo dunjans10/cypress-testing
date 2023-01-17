@@ -19,5 +19,10 @@ describe("Basics - visit", () => {
       cy.log(title)
       expect(title).to.be.equal("Text Input")
     })
+  });
+
+  it("change button text", () => {
+    cy.get("input#newButtonName").click().type("hello from input")
+    cy.get("button#updatingButton").click().should("have.text", "hello from input")
   })
 })
