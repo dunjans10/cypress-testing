@@ -5,6 +5,12 @@ describe("empty spec", () => {
   after(() => {
     cy.log("Hello from the after hook")
   });
+  beforeEach(() => {
+    cy.log("Hello from the before each hook")
+  });
+  afterEach(() => {
+    cy.log("Hello from the after each hook")
+  });
   it("testcase#1", () => {
     cy.log("Hello from test case #1")
   });
