@@ -12,9 +12,11 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-require('@cypress/xpath')
+
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-xpath'
+import 'cypress-real-events'
 
 
 // Alternatively you can use CommonJS syntax:
