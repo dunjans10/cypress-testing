@@ -9,4 +9,7 @@ export default defineConfig({
     pageLoadTimeout:60000,
     //defaultCommandTimeout:16000
   },
+  env:{
+    exampleVar:"Hello from the Cypress.config.ts"
+  }
 });
