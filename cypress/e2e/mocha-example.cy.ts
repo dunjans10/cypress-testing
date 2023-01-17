@@ -1,4 +1,10 @@
 describe("empty spec", () => {
+  before(() => {
+    cy.log("Hello from the before hook")
+  });
+  after(() => {
+    cy.log("Hello from the after hook")
+  });
   it("testcase#1", () => {
     cy.log("Hello from test case #1")
   });
