@@ -13,8 +13,8 @@ export default defineConfig({
   },
   env:{
     exampleVar:"Hello from the Cypress.config.ts",
-    demoQA:"https://demoqa.com/",
-    theInternet:"https://the-internet.herokuapp.com/",
+    demoQA:"https://demoqa.com",
+    theInternet:"https://the-internet.herokuapp.com",
     angular:"https://www.globalsqa.com/"
   }
 });
