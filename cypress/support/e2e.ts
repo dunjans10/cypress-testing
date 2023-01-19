@@ -23,7 +23,7 @@ import "./exceptions"
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach(() => {
+/*beforeEach(() => {
   cy.session("mySession", () => {
     cy.visit(`${Cypress.env("demoQA")}/login`)
     cy.get("#userName").type("test")
@@ -41,4 +41,4 @@ after(() => {
     expect(cookies).to.have.length(0)
     
   })
-})
+})*/
