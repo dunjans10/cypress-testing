@@ -22,3 +22,23 @@ import "./exceptions"
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(() => {
+  cy.session("mySession", () => {
+    cy.visit(`${Cypress.env("demoQA")}/login`)
+    cy.get("#userName").type("test")
+    cy.get("#password").type("Test1234*")
+    cy.get("#login").click()
+    cy.url().should("contain", "profile")
+  });
+});
+
+after(() => {
+  cy.log("I am a global after hook")
+  cy.clearCookies()
+  cy.getCookies().then((cookies) => {
+    cy.log("cookies", cookies.length)
+    expect(cookies).to.have.length(0)
+    
+  })
+})
